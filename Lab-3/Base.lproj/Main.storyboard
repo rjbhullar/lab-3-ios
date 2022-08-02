@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OoX-l0-9YE">
-                                <rect key="frame" x="67" y="198" width="280" height="274.5"/>
+                                <rect key="frame" x="67" y="198" width="280" height="346.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRN-D9-LMn">
                                         <rect key="frame" x="20" y="0.0" width="240" height="128"/>
@@ -29,8 +29,14 @@
                                         <color key="textColor" name="AccentColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whe-ez-I0p">
+                                        <rect key="frame" x="67" y="230" width="146" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7P-qb-Jmj">
-                                        <rect key="frame" x="72" y="230" width="136.5" height="44.5"/>
+                                        <rect key="frame" x="72" y="302" width="136.5" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
@@ -106,6 +112,7 @@
                         <outlet property="locationLabel" destination="g7P-qb-Jmj" id="7kc-8Z-wy0"/>
                         <outlet property="locationTextField" destination="bp0-af-rqZ" id="ZIh-jz-eHW"/>
                         <outlet property="tempeartureLabel" destination="x2q-cI-XMP" id="rdk-2m-0qh"/>
+                        <outlet property="weatherCondition" destination="whe-ez-I0p" id="nsD-uP-E3B"/>
                         <outlet property="weatherConditionImage" destination="oRN-D9-LMn" id="sxV-8L-WkR"/>
                         <outlet property="weatherInfoStackView" destination="OoX-l0-9YE" id="wO2-B1-uVq"/>
                     </connections>

@@ -15,9 +15,9 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
   @IBOutlet weak var tempeartureLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var weatherInfoStackView: UIStackView!
-
   @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-  let manager = CLLocationManager()
+    @IBOutlet weak var weatherCondition: UILabel!
+    let manager = CLLocationManager()
 
   @IBOutlet weak var errorLabel: UILabel!
   override func viewDidLoad() {
@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     manager.delegate = self
 
   }
-
+    
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.endEditing(true)
     getWeatherInfo(locationName: locationTextField.text)
@@ -125,6 +125,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
       if let weatherInfo = self.parseJSON(data: data) {
         DispatchQueue.main.async {
           self.locationLabel.text = weatherInfo.location.name
+            self.weatherCondition.text = weatherInfo.current.condition.text
           self.tempeartureLabel.text = "\(weatherInfo.current.temp_c)\u{00B0}C"
           self.displaySunnyImage(weatherCondition: weatherInfo.current.condition.code)
           self.weatherInfoStackView.isHidden = false
